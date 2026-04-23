@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>A Spooky Story</title>
+    <style>
+       body.dark {
+        background-color: black;
+        color: white;
+       }
+
+       body.white {
+        background-color: white;
+        color: black;
+       }
+
+       button {
+        display : block;
+        margin : 5px;
+       }
+       .textEntry {
+        margin-top: 12px;
+        margin-bottom : 15px;
+       }
+    </style>
+</head>
+<body class="white">
+    <h1>A Spooky Story</h1>
+    <p id="story">One day, while descending down to our basement, my friend has lost himself in a clever darkness.</p>
+
+    <button onclick="goDark()">Get into the Mood</button>
+    <div class="textEntry">Type your name here.<input type="text" id="nameInput"/></div>
+    <button onclick="typeAndScream()">Please, please don't click me!</button>
+    <button onclick="finishTheStory()">Tell me what happened!</button>
+    <script>
+        function typeAndScream() {
+            var name= document.getElementById("nameInput").value;
+            alert(`I told you not to do that, ${name}!`);
+        }
+
+        function goDark() {
+            document.body.className = "dark";
+        }
+
+        function finishTheStory() {
+            document.getElementById("story").innerHTML = "I found him fixing the light switch!";
+        }
+    </script>
+</body>
+</html>
