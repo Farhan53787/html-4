@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    <style>
+        h2 {
+            text-align : center;
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border-radius : 0px;
+        }
+        .buttons {
+            width : 200px;
+            height : 100px;
+            text-align :center;
+        }
+    </style>
+</head>
+<body>
+     <h2>Make Change in your Square</h2>
+
+    <div class="square"></div>
+
+     <div class="buttons">
+        <button onclick = "Circle()">Make it Circle</button>
+        <button onclick = "Rect()">Make it Rectangle</button>
+        <button onclick = "sqr()">Default</button>
+        <button onclick="sky()">Make its color sky</button>
+        <button onclick="hide()">Hide</button>
+        <button onclick="show()">Show</button>
+     </div>
+     <script>
+        function Circle() {
+            document.querySelector(".square").style.borderRadius = "100%";
+            document.querySelector(".square").style.width = "200px";
+        }
+        function Rect() {
+            document.querySelector(".square").style.width = "300px" ;
+            document.querySelector(".square").style.borderRadius = "0%";
+        }
+        function sqr() {
+            document.querySelector(".square").style.width = "200px";
+            document.querySelector(".square").style.borderRadius = "0%";
+        }
+        function sky() {
+            document.querySelector(".square").style.backgroundColor = "skyblue";
+        }
+        function hide() {
+                document.querySelector(".square").style.display = "none";
+            }
+        function show() {
+                document.querySelector(".square").style.display = "block";
+            }
+     </script>  
+</body>
+</html>
