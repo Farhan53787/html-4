@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Designer</title>
+    <style>
+        .text {
+            font-size : 30px;
+        }
+        .heading {
+            color : aqua;
+            background-color : rgb(102, 255, 0);
+            border-radius : 20px
+        }
+    </style>
+
+</head>
+<body style="text-align : center; background-color : #FFFDD0">
+    <h1 class="heading">Text Designer</h1>
+    <h3 class="text"></h3>
+    <script>
+        let UserInputText = prompt('Enter text');
+        let UserInputColor = prompt('Enter a color');
+        function Type() {
+            document.querySelector('.text').textContent = UserInputText;
+            document.querySelector('.text').style.color = UserInputColor;
+        }
+        Type();
+    </script>
+</body>
+</html>
